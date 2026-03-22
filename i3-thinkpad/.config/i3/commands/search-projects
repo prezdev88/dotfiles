@@ -1,0 +1,1 @@
+bash -c 'sel=$(find /home/prezdev/git-projects -maxdepth 1 -mindepth 1 -type d | awk -F/ "{print \$NF}" | sort | rofi -dmenu -i -p "Proyectos"); [ -n "$sel" ] && code "/home/prezdev/git-projects/$sel"'
