@@ -1,1 +1,0 @@
-ps aux | rofi -dmenu -i -p "Matar proceso:" | awk '{print $2}' | xargs -r kill
