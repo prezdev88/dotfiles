@@ -1,0 +1,14 @@
+swipe:
+  4:
+    left:
+      command: "i3-msg workspace next"
+    right:
+      command: "i3-msg workspace prev"
+  3:
+    right:
+      command: "xdotool key Super+Left"
+    left:
+      command: "xdotool key Super+Right"
+
+interval:
+  swipe: 0.7
