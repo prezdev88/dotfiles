@@ -3,3 +3,4 @@
 *~
 .nfs*
 .git/
+xfce4-terminal/.config/xfce4/xfconf/xfce-perchannel-xml/thunar.xml
