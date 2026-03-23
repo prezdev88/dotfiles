@@ -87,17 +87,6 @@ stow_package() {
     fi
 }
 
-# Función para quitar stow
-unstow_package() {
-    local pkg=$1
-    msg "Desinstalando $pkg..."
-    if stow -D "$pkg"; then
-        success "$pkg desenlazado correctamente."
-    else
-        error "Hubo un problema al desenlazar $pkg."
-    fi
-}
-
 # Menú principal
 PS3="${DOT_YELLOW}Seleccione una opción (1-N o q para salir): ${DOT_NORMAL}"
 
@@ -109,16 +98,10 @@ show_menu() {
     
     packages=($(get_packages))
     
-    options=("Instalar TODO" "Desinstalar TODO" "${packages[@]}" "Salir")
-    
+    options=("${packages[@]}" "Salir")
+
     select opt in "${options[@]}"; do
         case $opt in
-            "Instalar TODO")
-                for p in "${packages[@]}"; do stow_package "$p"; done
-                break ;;
-            "Desinstalar TODO")
-                for p in "${packages[@]}"; do unstow_package "$p"; done
-                break ;;
             "Salir")
                 msg "¡Hasta luego!"
                 exit 0 ;;
