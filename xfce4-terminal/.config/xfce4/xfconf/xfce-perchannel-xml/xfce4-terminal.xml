@@ -1,7 +1,7 @@
 <?xml version="1.1" encoding="UTF-8"?>
 
 <channel name="xfce4-terminal" version="1.0">
-  <property name="font-name" type="string" value="Monospace 13"/>
+  <property name="font-name" type="string" value="Monospace 14"/>
   <property name="binding-backspace" type="string" value="TERMINAL_ERASE_BINDING_ERASE_TTY"/>
   <property name="command-login-shell" type="bool" value="false"/>
   <property name="run-custom-command" type="bool" value="true"/>
