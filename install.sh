@@ -32,16 +32,44 @@ get_packages() {
     find . -maxdepth 1 -type d ! -name ".*" ! -name "." | sed 's|./||' | sort
 }
 
+# Función para limpiar conflictos antes de hacer stow
+clean_conflicts() {
+    local pkg=$1
+    msg "Limpiando conflictos para $pkg..."
+    
+    # Buscamos archivos en el paquete y verificamos sus destinos en el HOME
+    # Usamos -mindepth 1 para no procesar la carpeta del paquete en sí
+    find "$pkg" -mindepth 1 -maxdepth 2 | while read -r source; do
+        # Convertimos la ruta del paquete a la ruta equivalente en el HOME
+        # Ej: i3-pc/.config/i3 -> ~/.config/i3
+        local relative_path=$(echo "$source" | sed "s|^$pkg/||")
+        local target="$HOME/$relative_path"
+        
+        if [ -e "$target" ] || [ -L "$target" ]; then
+            # Si ya es un enlace simbólico a nuestro repo, no hacemos nada
+            if [ -L "$target" ] && [[ $(readlink -f "$target") == $(readlink -f "$source") ]]; then
+                continue
+            fi
+            
+            # Si no, procedemos a borrarlo para que stow pueda crear el enlace
+            echo "  ${DOT_YELLOW}Removiendo existente:${DOT_NORMAL} $target"
+            rm -rf "$target"
+        fi
+    done
+}
+
 # Función para aplicar stow
 stow_package() {
     local pkg=$1
-    msg "Instalando $pkg..."
-    # Intentamos hacer stow. Si falla por archivos existentes, avisamos.
-    if stow "$pkg" 2>/dev/null; then
+    
+    # Primero limpiamos conflictos
+    clean_conflicts "$pkg"
+    
+    msg "Instalando $pkg con stow..."
+    if stow "$pkg"; then
         success "$pkg enlazado correctamente."
     else
-        error "No se pudo enlazar $pkg. ¿Ya existen los archivos en ~/.config/?"
-        echo "Prueba borrando la carpeta original primero (ej: rm -rf ~/.config/$pkg)"
+        error "Hubo un error al ejecutar stow para $pkg."
     fi
 }
 
