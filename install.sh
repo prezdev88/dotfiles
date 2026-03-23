@@ -35,15 +35,29 @@ get_packages() {
 # Función para limpiar conflictos antes de hacer stow
 clean_conflicts() {
     local pkg=$1
-    msg "Limpiando conflictos para $pkg..."
+    msg "Analizando conflictos para $pkg..."
     
+    # SEGURIDAD: Lista de carpetas que NUNCA deben ser borradas
+    local protected_dirs=(".config" ".local" ".cache" ".gnupg" ".ssh")
+
     # Buscamos archivos en el paquete y verificamos sus destinos en el HOME
-    # Usamos -mindepth 1 para no procesar la carpeta del paquete en sí
     find "$pkg" -mindepth 1 -maxdepth 2 | while read -r source; do
-        # Convertimos la ruta del paquete a la ruta equivalente en el HOME
-        # Ej: i3-pc/.config/i3 -> ~/.config/i3
         local relative_path=$(echo "$source" | sed "s|^$pkg/||")
         local target="$HOME/$relative_path"
+        
+        # Verificar si la ruta está en la lista protegida
+        local is_protected=false
+        for pdir in "${protected_dirs[@]}"; do
+            if [[ "$relative_path" == "$pdir" ]]; then
+                is_protected=true
+                break
+            fi
+        done
+
+        if [ "$is_protected" = true ]; then
+            # Si es una carpeta protegida, simplemente la saltamos
+            continue
+        fi
         
         if [ -e "$target" ] || [ -L "$target" ]; then
             # Si ya es un enlace simbólico a nuestro repo, no hacemos nada
@@ -51,7 +65,7 @@ clean_conflicts() {
                 continue
             fi
             
-            # Si no, procedemos a borrarlo para que stow pueda crear el enlace
+            # Borrar el conflicto (ej: ~/.config/i3)
             echo "  ${DOT_YELLOW}Removiendo existente:${DOT_NORMAL} $target"
             rm -rf "$target"
         fi
