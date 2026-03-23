@@ -92,7 +92,7 @@ bindsym $mod+i exec $commands/search-projects
 bindsym $mod+n exec mousepad
 bindsym $mod+F1 exec chromium
 bindsym $mod+F2 exec code ~/.config/i3/config
-bindsym $mod+F3 exec youtube-music
+bindsym $mod+F3 exec $commands/ytmusic
 bindsym $mod+F4 exec $commands/youtube
 bindsym $mod+F5 exec thunar
 bindsym $mod+F6 exec chromium --app=https://devdocs.io/
