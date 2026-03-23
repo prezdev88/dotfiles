@@ -40,8 +40,8 @@ clean_conflicts() {
     # SEGURIDAD: Lista de carpetas que NUNCA deben ser borradas
     local protected_dirs=(".config" ".local" ".cache" ".gnupg" ".ssh")
 
-    # Buscamos archivos en el paquete y verificamos sus destinos en el HOME
-    find "$pkg" -mindepth 1 -maxdepth 2 | while read -r source; do
+    # Revisamos todos los archivos/enlaces del paquete para cubrir rutas profundas
+    find "$pkg" \( -type f -o -type l \) | while read -r source; do
         local relative_path=$(echo "$source" | sed "s|^$pkg/||")
         local target="$HOME/$relative_path"
         
