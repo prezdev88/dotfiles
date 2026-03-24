@@ -198,7 +198,7 @@ bindsym $mod+t exec $commands/battery-left
 bindsym $mod+b exec blueman-manager
 bindsym $mod+g exec $commands/gptchat
 bindsym $mod+Tab exec $commands/show-windows
-bindsym $mod+m exec $commands/keypress/run
+bindsym $mod+m exec $commands/bleft/run
 bindsym $mod+Shift+s sticky toggle
 
 # Volume
@@ -224,7 +224,7 @@ exec --no-startup-id /usr/bin/octopi-notifier
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
 exec --no-startup-id clipit
-# exec --no-startup-id flameshot
+exec --no-startup-id flameshot
 exec --no-startup-id pasystray
 exec --no-startup-id udiskie --tray
 exec --no-startup-id dunst
@@ -234,6 +234,8 @@ exec --no-startup-id xinput set-prop "Synaptics TM3471-020" "libinput Natural Sc
 exec --no-startup-id blueman-applet
 exec --no-startup-id streamdeck -n
 exec --no-startup-id fusuma
+exec --no-startup-id ~/.config/i3/commands/fix
+exec --no-startup-id bash -lc 'pkill conky; conky -c ~/.config/conky/conky.conf &'
 
 # gaps outer 1
 # gaps inner 5
