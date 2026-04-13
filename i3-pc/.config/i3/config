@@ -90,12 +90,12 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+i exec $commands/search-projects
 bindsym $mod+n exec mousepad
-bindsym $mod+F1 exec chromium
+bindsym $mod+F1 exec chromium --password-store=basic
 bindsym $mod+F2 exec code ~/.config/i3/config
 bindsym $mod+F3 exec $commands/ytmusic
 bindsym $mod+F4 exec $commands/youtube
 bindsym $mod+F5 exec thunar
-bindsym $mod+F6 exec chromium --app=https://devdocs.io/
+bindsym $mod+F6 exec chromium --password-store=basic --app=https://devdocs.io/
 bindsym $mod+F12 exec $commands/aswitch2
 bindsym $mod+Shift+F12 exec $commands/aswitch3
 bindsym $mod+Escape kill
@@ -138,7 +138,7 @@ exec_always --no-startup-id xrandr --output DP-4 --mode 3440x1440 --rate 74.98
 exec_always --no-startup-id xrandr --output DP-1 --mode 1920x1080 --rate 74.97
 exec_always --no-startup-id picom --config ~/.config/picom/picom.conf
 
-assign [title="web.whatsapp.com"] $ws2
+# assign [title="web.whatsapp.com"] $ws2
 
 # gdu = espacio en disco
 # qps = monitoreo
