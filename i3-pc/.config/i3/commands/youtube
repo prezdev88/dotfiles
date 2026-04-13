@@ -1,1 +1,1 @@
-chromium --app=https://youtube.com
+chromium --password-store=basic --app=https://youtube.com
