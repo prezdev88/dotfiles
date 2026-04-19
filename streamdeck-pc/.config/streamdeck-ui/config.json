@@ -25,23 +25,39 @@
                         }
                     },
                     "1": {
-                        "state": 0,
+                        "state": 1,
                         "states": {
                             "0": {
                                 "text": "",
-                                "icon": "",
+                                "icon": "/home/prezdev/.config/streamdeck-ui/images/music-play.png",
                                 "keys": "",
                                 "write": "",
-                                "command": "",
+                                "command": "playerctl --player=chromium play",
                                 "brightness_change": 0,
                                 "switch_page": 0,
-                                "switch_state": 0,
-                                "text_vertical_align": "middle",
+                                "switch_state": 2,
+                                "text_vertical_align": "",
                                 "text_horizontal_align": "",
                                 "font": "",
                                 "font_color": "",
                                 "font_size": 0,
-                                "background_color": ""
+                                "background_color": "#398a93"
+                            },
+                            "1": {
+                                "text": "",
+                                "icon": "/home/prezdev/.config/streamdeck-ui/images/music-pause.png",
+                                "keys": "",
+                                "write": "",
+                                "command": "playerctl --player=chromium pause",
+                                "brightness_change": 0,
+                                "switch_page": 0,
+                                "switch_state": 1,
+                                "text_vertical_align": "",
+                                "text_horizontal_align": "",
+                                "font": "",
+                                "font_color": "",
+                                "font_size": 0,
+                                "background_color": "#398a93"
                             }
                         }
                     },
@@ -139,9 +155,9 @@
                                 "icon": "/home/prezdev/.config/streamdeck-ui/images/youtube-music.png",
                                 "keys": "",
                                 "write": "",
-                                "command": "youtube-music",
+                                "command": "microsoft-edge-stable --app=https://music.youtube.com",
                                 "brightness_change": 0,
-                                "switch_page": 9,
+                                "switch_page": 0,
                                 "switch_state": 0,
                                 "text_vertical_align": "middle",
                                 "text_horizontal_align": "",
@@ -162,7 +178,7 @@
                                 "write": "",
                                 "command": "",
                                 "brightness_change": 0,
-                                "switch_page": 6,
+                                "switch_page": 3,
                                 "switch_state": 0,
                                 "text_vertical_align": "",
                                 "text_horizontal_align": "",
@@ -178,19 +194,19 @@
                         "states": {
                             "0": {
                                 "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/config.png",
+                                "icon": "",
                                 "keys": "",
                                 "write": "",
                                 "command": "",
                                 "brightness_change": 0,
-                                "switch_page": 9,
+                                "switch_page": 0,
                                 "switch_state": 0,
-                                "text_vertical_align": "middle",
+                                "text_vertical_align": "",
                                 "text_horizontal_align": "",
                                 "font": "",
                                 "font_color": "",
-                                "font_size": 21,
-                                "background_color": "#ebc800"
+                                "font_size": 0,
+                                "background_color": ""
                             }
                         }
                     },
@@ -258,7 +274,7 @@
                         }
                     }
                 },
-                "5": {
+                "2": {
                     "0": {
                         "state": 0,
                         "states": {
@@ -382,150 +398,6 @@
                                 "font_color": "",
                                 "font_size": 0,
                                 "background_color": ""
-                            }
-                        }
-                    }
-                },
-                "8": {
-                    "0": {
-                        "state": 0,
-                        "states": {
-                            "0": {
-                                "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/music-prev.png",
-                                "keys": "",
-                                "write": "",
-                                "command": "playerctl --player=chromium previous",
-                                "brightness_change": 0,
-                                "switch_page": 0,
-                                "switch_state": 0,
-                                "text_vertical_align": "",
-                                "text_horizontal_align": "",
-                                "font": "",
-                                "font_color": "",
-                                "font_size": 0,
-                                "background_color": "#398a93"
-                            }
-                        }
-                    },
-                    "1": {
-                        "state": 1,
-                        "states": {
-                            "0": {
-                                "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/music-play.png",
-                                "keys": "",
-                                "write": "",
-                                "command": "playerctl --player=chromium play",
-                                "brightness_change": 0,
-                                "switch_page": 0,
-                                "switch_state": 2,
-                                "text_vertical_align": "",
-                                "text_horizontal_align": "",
-                                "font": "",
-                                "font_color": "",
-                                "font_size": 0,
-                                "background_color": "#398a93"
-                            },
-                            "1": {
-                                "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/music-pause.png",
-                                "keys": "",
-                                "write": "",
-                                "command": "playerctl --player=chromium pause",
-                                "brightness_change": 0,
-                                "switch_page": 0,
-                                "switch_state": 1,
-                                "text_vertical_align": "",
-                                "text_horizontal_align": "",
-                                "font": "",
-                                "font_color": "",
-                                "font_size": 0,
-                                "background_color": "#398a93"
-                            }
-                        }
-                    },
-                    "2": {
-                        "state": 0,
-                        "states": {
-                            "0": {
-                                "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/music-next.png",
-                                "keys": "",
-                                "write": "",
-                                "command": "playerctl --player=chromium next",
-                                "brightness_change": 0,
-                                "switch_page": 0,
-                                "switch_state": 0,
-                                "text_vertical_align": "",
-                                "text_horizontal_align": "",
-                                "font": "",
-                                "font_color": "",
-                                "font_size": 0,
-                                "background_color": "#398a93"
-                            }
-                        }
-                    },
-                    "3": {
-                        "state": 0,
-                        "states": {
-                            "0": {
-                                "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/prev.png",
-                                "keys": "",
-                                "write": "",
-                                "command": "",
-                                "brightness_change": 0,
-                                "switch_page": 2,
-                                "switch_state": 0,
-                                "text_vertical_align": "",
-                                "text_horizontal_align": "",
-                                "font": "",
-                                "font_color": "",
-                                "font_size": 0,
-                                "background_color": "#a60003"
-                            }
-                        }
-                    },
-                    "4": {
-                        "state": 0,
-                        "states": {
-                            "0": {
-                                "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/vol-down.png",
-                                "keys": "",
-                                "write": "",
-                                "command": "pactl set-sink-volume @DEFAULT_SINK@ -2%",
-                                "brightness_change": 0,
-                                "switch_page": 0,
-                                "switch_state": 0,
-                                "text_vertical_align": "",
-                                "text_horizontal_align": "",
-                                "font": "",
-                                "font_color": "",
-                                "font_size": 0,
-                                "background_color": "#8a0000"
-                            }
-                        }
-                    },
-                    "5": {
-                        "state": 0,
-                        "states": {
-                            "0": {
-                                "text": "",
-                                "icon": "/home/prezdev/.config/streamdeck-ui/images/vol-up.png",
-                                "keys": "",
-                                "write": "",
-                                "command": "pactl set-sink-volume @DEFAULT_SINK@ +2%",
-                                "brightness_change": 0,
-                                "switch_page": 0,
-                                "switch_state": 0,
-                                "text_vertical_align": "",
-                                "text_horizontal_align": "",
-                                "font": "",
-                                "font_color": "",
-                                "font_size": 0,
-                                "background_color": "#1f6f0d"
                             }
                         }
                     }
