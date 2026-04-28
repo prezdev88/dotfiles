@@ -219,7 +219,7 @@ bindsym Scroll_Lock exec $commands/lock
 bindsym $mod+l exec $commands/lock
 
 exec --no-startup-id i3-msg 'workspace 2; exec google-chrome-stable'
-exec --no-startup-id i3-msg 'workspace 2; exec google-chrome-stable --app="https://teams.cloud.microsoft/" --class=teams-cloud
+exec --no-startup-id i3-msg 'workspace 2; exec teams-for-linux'
 exec --no-startup-id /usr/bin/octopi-notifier
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
