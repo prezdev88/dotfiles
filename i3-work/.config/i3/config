@@ -184,7 +184,7 @@ bindsym $mod+i exec $commands/search-projects
 bindsym $mod+n exec mousepad
 bindsym $mod+F1 exec chromium
 bindsym $mod+F2 exec discord
-bindsym $mod+F3 exec youtube-music
+bindsym $mod+F3 exec $commands/ytmusic
 bindsym $mod+F4 exec $commands/youtube
 bindsym $mod+F5 exec thunar
 bindsym $mod+Escape kill
@@ -219,7 +219,7 @@ bindsym Scroll_Lock exec $commands/lock
 bindsym $mod+l exec $commands/lock
 
 exec --no-startup-id i3-msg 'workspace 2; exec google-chrome-stable'
-exec --no-startup-id i3-msg 'workspace 2; exec slack'
+exec --no-startup-id i3-msg 'workspace 2; exec google-chrome-stable --app="https://teams.cloud.microsoft/" --class=teams-cloud
 exec --no-startup-id /usr/bin/octopi-notifier
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id redshift
