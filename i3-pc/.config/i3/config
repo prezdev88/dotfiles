@@ -90,23 +90,23 @@ bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
 bindsym $mod+d exec --no-startup-id dmenu_run
 bindsym $mod+i exec $commands/search-projects
 bindsym $mod+n exec mousepad
-bindsym $mod+F1 exec chromium --password-store=basic
+bindsym $mod+F1 exec google-chrome-stable --profile-directory="Default" --password-store=basic
 bindsym $mod+F2 exec code ~/.config/i3/config
-bindsym $mod+F3 exec $commands/ytmusic
-bindsym $mod+F4 exec $commands/youtube
+bindsym $mod+F3 exec google-chrome-stable --profile-directory="Profile 1" --password-store=basic --app=https://music.youtube.com
+bindsym $mod+F4 exec google-chrome-stable --profile-directory="Default" --password-store=basic --app=https://youtube.com
 bindsym $mod+F5 exec thunar
-bindsym $mod+F6 exec chromium --password-store=basic --app=https://devdocs.io/
+bindsym $mod+F6 exec google-chrome-stable --profile-directory="Default" --password-store=basic --app=https://devdocs.io/
 bindsym $mod+F12 exec $commands/aswitch2
 bindsym $mod+Shift+F12 exec $commands/aswitch3
 bindsym $mod+Escape kill
-bindsym $mod+g exec $commands/gptchat
+bindsym $mod+g exec google-chrome-stable --profile-directory="Default" --password-store=basic --app=https://gemini.google.com/app?hl=es
 bindsym $mod+Shift+p exec poweroff
 bindsym $mod+$alt+Shift+p exec reboot
 bindsym $mod+plus exec kmag
 bindsym $mod+b exec blueman-manager
 bindsym $mod+m exec --no-startup-id $commands/keypress/run
 bindsym $mod+Tab exec $commands/show-windows
-bindsym $mod+Shift+w exec google-chrome-stable --app=https://web.whatsapp.com/
+bindsym $mod+Shift+w exec google-chrome-stable --profile-directory="Default" --app=https://web.whatsapp.com/
 bindsym $mod+apostrophe exec pactl set-sink-volume @DEFAULT_SINK@ -5%
 bindsym $mod+exclamdown exec pactl set-sink-volume @DEFAULT_SINK@ +5%
 bindsym $mod+Delete exec $commands/kill
