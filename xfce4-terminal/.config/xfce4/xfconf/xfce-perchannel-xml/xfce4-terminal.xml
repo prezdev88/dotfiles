@@ -12,4 +12,5 @@
   <property name="background-darkness" type="double" value="0.92000000000000004"/>
   <property name="cell-width-scale" type="double" value="1.1000000000000001"/>
   <property name="cell-height-scale" type="double" value="1"/>
+  <property name="scrolling-lines" type="uint" value="3000"/>
 </channel>
