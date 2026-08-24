@@ -103,7 +103,6 @@ bindsym $mod+g exec google-chrome-stable --profile-directory="Default" --app=htt
 bindsym $mod+Shift+p exec poweroff
 bindsym $mod+$alt+Shift+p exec reboot
 bindsym $mod+plus exec kmag
-bindsym $mod+b exec blueman-manager
 bindsym $mod+m exec --no-startup-id $commands/keypress/run
 bindsym $mod+Tab exec $commands/show-windows
 bindsym $mod+Shift+w exec google-chrome-stable --profile-directory="Default" --app=https://web.whatsapp.com/
@@ -115,7 +114,9 @@ bindsym $mod+Shift+h exec $commands/fish-history
 bindsym $mod+Shift+y exec --no-startup-id ~/.config/polybar/launch.sh
 bindsym Scroll_Lock exec $commands/lock
 bindsym $mod+l exec $commands/lock
+bindsym $mod+b exec blueman-manager
 bindsym $mod+Shift+b exec $commands/connect_sony_headphones.sh
+bindsym $mod+Shift+$alt+b exec $commands/rofi_bluetooth.sh
 
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id nm-applet
