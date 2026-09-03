@@ -202,8 +202,8 @@ bindsym $mod+m exec $commands/bleft/run
 bindsym $mod+Shift+s sticky toggle
 
 # Volume
-bindsym $mod+apostrophe exec pactl set-sink-volume @DEFAULT_SINK@ -5%
-bindsym $mod+exclamdown exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym $mod+apostrophe exec pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym $mod+exclamdown exec pactl set-sink-volume @DEFAULT_SINK@ +1%
 
 # Matar un proceso
 bindsym $mod+Delete exec $commands/kill
