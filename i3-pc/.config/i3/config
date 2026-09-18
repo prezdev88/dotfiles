@@ -113,6 +113,7 @@ bindsym $mod+l exec --no-startup-id $commands/lock
 bindsym $mod+b exec --no-startup-id blueman-manager
 bindsym $mod+Shift+b exec --no-startup-id $commands/connect_sony_headphones.sh
 bindsym $mod+Shift+$alt+b exec --no-startup-id $commands/rofi_bluetooth.sh
+bindsym $mod+Shift+m exec --no-startup-id $commands/toggle_mic.sh
 bindsym $mod+apostrophe exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
 bindsym $mod+exclamdown exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym --whole-window $mod+button4 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
