@@ -118,6 +118,7 @@ bindsym $mod+apostrophe exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK
 bindsym $mod+exclamdown exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym --whole-window $mod+button4 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +1%
 bindsym --whole-window $mod+button5 exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -1%
+bindsym $mod+t exec --no-startup-id google-chrome-stable --profile-directory="Default" --app=https://tidal.com/
 
 # exec --no-startup-id streamdeck -n
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
