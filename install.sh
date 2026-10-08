@@ -101,8 +101,8 @@ show_menu() {
     options=("${packages[@]}" "Salir")
 
     select opt in "${options[@]}"; do
-        case $opt in
-            "Salir")
+        case "${opt:-$REPLY}" in
+            "Salir"|q|Q)
                 msg "¡Hasta luego!"
                 exit 0 ;;
             *)
